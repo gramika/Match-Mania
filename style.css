@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
+}
+body{
+    background-image: url(./img/bgblurr.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sub{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.heading{
+    font-size: 30px;
+    color: ivory;
+  font-family: "Dancing Script", cursive;
+}
+#gameName{
+font-family: "Macondo", cursive;
+font-size: 50px;
+}
+#timeDisplay{
+font-family: "Shadows Into Light", cursive;
+}
+.card {
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  perspective: 1000px; /* needed for 3D flip */
+  cursor: pointer;
+  position: relative;
+}
+
+.card .frontImg, 
+.card .hiddenImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.card .frontImg {
+  background: rgba(63, 28, 4, 0.947); 
+}
+
+.card .hiddenImg {
+  transform: rotateY(180deg);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* flip effect */
+.card.flip .frontImg {
+  transform: rotateY(180deg);
+}
+
+.card.flip .hiddenImg {
+  transform: rotateY(0);
+}
+
+/* .card-img-top{
+    width: 120px;
+    padding: 10px;
+} */
+.timer{
+    color: white;
+}
+.button:hover{
+    background-color: rgba(184, 70, 70, 0.807);
+}
